@@ -1,0 +1,107 @@
+################################################################################
+# PANEL
+################################################################################
+style "panel1" = "default"
+{
+   xthickness			= 0
+   ythickness			= 1
+
+   fg[NORMAL] = "#000000"
+   fg[PRELIGHT] = "#404040"
+   fg[ACTIVE] = "#404040"
+   fg[INSENSITIVE] = "#DDE4FF"
+   text[NORMAL] = "#000000"
+   text[PRELIGHT] = "#DDE4FF"
+
+   bg_pixmap[NORMAL]					= "panel-bg1.png"
+   bg_pixmap[SELECTED]					= "panel-bg1.png"
+   bg_pixmap[INSENSITIVE]				= "panel-bg1.png"
+   bg_pixmap[PRELIGHT]					= "panel-bg1.png"
+}
+
+style "panel2" = "panel1"
+{
+   engine "pixmap"
+   {
+
+		image
+		{
+			function	= BOX
+			file		= "panel-bg1.png"
+			border		= { 0, 0, 0, 0 }
+			stretch		= FALSE
+  		}
+
+
+  }
+}
+
+class "*Panel*" style "panel1"
+class "*notif*" style "panel1"
+class "*Notif*" style "panel1"
+class "*Tray*" style "panel1"
+class "*tray*" style "panel1"
+widget_class "*Panel*" style "panel1"
+widget_class "*Panel*Menu*" style "panel2"
+widget "PanelDItemEditor" style "gradient"
+
+widget_class "*Mail*" style "panel1"
+widget_class "*applet*" style "panel1"
+widget_class "*manager*" style "panel1"
+widget_class "*nm-applet*" style "panel1"
+
+####
+class         "*Panel*Applet*"                        style "panel1"
+class         "*Mail*"                                style "panel1"
+class         "Xfce*Panel*"                           style "panel1"
+
+widget         "*TrayIcon*"                           style "panel1"
+widget         "*fast-user-switch*"                   style "panel1"
+widget         "*PanelWidget*"                        style "panel1"
+widget         "*PanelApplet*"                        style "panel1"
+
+widget_class     "*Panel*GtkToggleButton"             style "panel1"
+widget_class     "*Panel*GtkButton"                   style "panel1"
+widget_class     "*.Panel*Button*GtkLabel"            style "panel1"
+widget_class     "*.Panel*GtkLabel"                   style "panel1"
+widget_class     "*Netstatus*"                        style "panel1"
+widget_class     "*Tomboy*Tray*"                      style "panel1"
+widget_class     "*notif*"                            style "panel1"
+widget_class     "*Notif*"                            style "panel1"
+widget_class     "*Tray*"                             style "panel1"
+widget_class     "*tray*"                             style "panel1"
+widget_class     "*PanelToplevel*"                    style "panel1"
+widget_class     "*Xfce*Panel*"                       style "panel1"
+widget_class     "*PanelApplet*"                      style "panel1"
+widget_class     "*PanelWidget*"                      style "panel1"  
+###
+
+#### remove panel menu arrow
+style "panel-arrow-remove"
+
+{
+engine "pixmap"
+	{
+	image
+	{
+		function	= ARROW
+		recolorable	= TRUE
+		overlay_file	= "arrow-up_.png"
+		overlay_border	= {2,2,2,2}
+		overlay_stretch	= FALSE
+		arrow_direction	= UP
+	}
+
+	image
+	{
+		function	= ARROW
+		recolorable	= TRUE
+		overlay_file	= "arrow-up_.png"
+		overlay_border	= {2,2,2,2}
+		overlay_stretch	= FALSE
+		arrow_direction	= DOWN
+	}
+	}
+}
+
+widget_class "*PanelToplevel*" 			style "panel-arrow-remove"

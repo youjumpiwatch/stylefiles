@@ -1,0 +1,312 @@
+style "alt_shadows" = "default"
+{
+}
+
+style "scrollbar-alt" 
+
+{
+  GtkRange::trough_border = 0  #1
+  GtkRange::slider_width = 15
+  GtkRange::stepper_size = 15  
+  GtkScrollbar::min_slider_length = 30
+
+	engine "pixmap" 
+	{
+		# Horizontal slider background
+		image 
+		{
+            function        = BOX
+            recolorable     = TRUE
+            detail          = "trough"
+            file            = "Scrollbars2/trough-scrollbar-horiz.png"
+            border          = { 39, 39, 0, 0 }
+            stretch         = TRUE
+            orientation     = HORIZONTAL
+        }
+	    
+	    # Vertical slider background
+	    image 
+		{
+            function        = BOX
+            recolorable     = TRUE
+            detail          = "trough"
+            file            = "Scrollbars2/trough-scrollbar-vert.png"
+            border          = { 0, 0, 39, 39 }
+            stretch         = TRUE
+            orientation     = VERTICAL
+        }
+
+		# Normal horizontal slider
+	    image 
+		{
+	        function        = SLIDER
+	        recolorable     = TRUE
+	        state           = NORMAL
+	        file            = "Scrollbars2/slider-horiz.png"
+	        border          = { 15, 15, 6, 6 }
+	        stretch         = TRUE
+	        orientation     = HORIZONTAL
+	    }
+		
+		# Horizontal slider (active)
+		image 
+		{
+	        function        = SLIDER
+	        recolorable     = TRUE
+	        state           = ACTIVE
+	        file            = "Scrollbars2/slider-horiz-prelight.png"
+	        border          = { 15, 15, 6, 6 }
+	        stretch         = TRUE
+	        orientation     = HORIZONTAL
+		}
+
+		# Horizontal slider (mouse over)
+	    image 
+		{
+	        function        = SLIDER 
+	        recolorable     = TRUE
+	        state           = PRELIGHT
+	        file            = "Scrollbars2/slider-horiz-prelight.png"
+	        border          = { 15, 15, 6, 6 }
+	        stretch         = TRUE
+	        orientation     = HORIZONTAL
+	    }
+	    
+	    # Horizontal slider (Insesitive)
+		image 
+		{
+	        function        = SLIDER 
+	        recolorable     = TRUE
+	        state           = INSENSITIVE
+	        file            = "Scrollbars2/slider-horiz.png"
+	        border          = { 15, 15, 6, 6 }
+	        stretch         = TRUE
+	        orientation     = HORIZONTAL
+	    }
+
+	    # Normal vertical slider
+	    image 
+		{
+	        function        = SLIDER
+	        recolorable     = TRUE
+	        state           = NORMAL
+	        file            = "Scrollbars2/slider-vert.png"
+	        border          = { 6, 6, 15, 15 }
+	        stretch         = TRUE
+	        orientation     = VERTICAL
+		}
+		
+		# Vertical slider (Active)
+		image 
+		{
+	        function        = SLIDER
+	        recolorable     = TRUE
+	        state           = ACTIVE
+	        file            = "Scrollbars2/slider-vert.png"
+	        border          = { 6, 6, 15, 15 }
+	        stretch         = TRUE
+	        orientation     = VERTICAL
+		}
+
+		# Vertical slider (mouse over)
+	    image 
+		{
+	        function        = SLIDER 
+	        recolorable     = TRUE
+	        state           = PRELIGHT
+	        file            = "Scrollbars2/slider-vert-prelight.png"
+	        border          = { 6, 6, 15, 15 }
+	        stretch         = TRUE
+	        orientation     = VERTICAL
+	    }
+	    
+	    # Vertical slider (Insesitive)
+		image 
+		{
+	        function        = SLIDER 
+	        recolorable     = TRUE
+	        state           = INSENSITIVE
+	        file            = "Scrollbars2/slider-vert-prelight.png"
+	        border          = { 6, 6, 15, 15 }
+	        stretch         = TRUE
+	        orientation     = VERTICAL
+	    }
+
+	# Up
+    image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= NORMAL
+      file				= "Scrollbars2/null.png"
+      #border			= { 12, 2, 2, 9 }
+      stretch			= TRUE
+      arrow_direction	= UP
+    }
+ 	image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= PRELIGHT
+      file				= "Scrollbars2/null.png"
+      #border			= { 12, 2, 2, 9 }
+      stretch			= TRUE
+      arrow_direction	= UP
+    }
+ image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= ACTIVE
+      file				= "Scrollbars2/null.png"
+      #border			= { 12, 2, 2, 9 }
+      stretch			= TRUE
+      arrow_direction	= UP
+    }
+ image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= INSENSITIVE
+      file				= "Scrollbars2/null.png"
+      #border			= { 12, 2, 2, 9 }
+      stretch			= TRUE
+      arrow_direction	= UP
+    }
+
+ ######### DOWN ############
+
+
+    image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= NORMAL
+      file				= "Scrollbars2/null.png"
+      #border			= { 12, 2, 10, 2 }
+      stretch			= TRUE
+      arrow_direction	= DOWN
+    }
+ image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= PRELIGHT
+      file				= "Scrollbars2/null.png"
+      #border			= { 12, 2, 10, 2 }
+      stretch			= TRUE
+      arrow_direction	= DOWN
+    }
+ image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= ACTIVE
+      file				= "Scrollbars2/null.png"
+      #border			= { 12, 2, 10, 2 }
+      stretch			= TRUE
+      arrow_direction	= DOWN
+    }
+ image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= INSENSITIVE
+      file				= "Scrollbars2/null.png"
+      #border			= { 12, 2, 10, 2 }
+      stretch			= TRUE
+      arrow_direction	= DOWN
+    }
+
+############ RIGHT ################
+
+    image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= NORMAL
+      file				= "Scrollbars2/null.png"
+      #border			= { 2, 9, 2, 13 }
+      stretch			= TRUE
+      arrow_direction	= RIGHT
+    }
+ image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= PRELIGHT
+      file				= "Scrollbars2/null.png"
+      #border			= { 2, 9, 2, 13 }
+      stretch			= TRUE
+      arrow_direction	= RIGHT
+    }
+ image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= ACTIVE
+      file				= "Scrollbars2/null.png"
+      #border			= { 2, 9, 2, 13 }
+      stretch			= TRUE
+      arrow_direction	= RIGHT
+    }
+ image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= INSENSITIVE
+      file				= "Scrollbars2/null.png"
+      #border			= { 2, 9, 2, 13 }
+      stretch			= TRUE
+      arrow_direction	= RIGHT
+    }
+
+############### LEFT ###################
+
+
+    image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= NORMAL
+      file				= "Scrollbars2/null.png"
+      #border			= { 2, 9, 2, 13 }
+      stretch			= TRUE
+      arrow_direction	= LEFT
+    }
+  image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= PRELIGHT
+      file				= "Scrollbars2/null.png"
+      #border			= { 2, 9, 2, 13 }
+      stretch			= TRUE
+      arrow_direction	= LEFT
+    }
+  image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= ACTIVE
+      file				= "Scrollbars2/null.png"
+      #border			= { 2, 9, 2, 13 }
+      stretch			= TRUE
+      arrow_direction	= LEFT
+    }
+  image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= INSENSITIVE
+      file				= "Scrollbars2/null.png"
+      #border			= { 2, 9, 2, 13 }
+      stretch			= TRUE
+      arrow_direction	= LEFT
+    }
+  	}
+}
+
+class "*RB*" style "alt_shadows"
+widget "*RB*croll?ar*"        		style "scrollbar-alt"
+
